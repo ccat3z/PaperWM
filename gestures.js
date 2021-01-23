@@ -370,6 +370,7 @@ function endVertical() {
         }
 
         if (test()) {
+            navigator.finish();
             return false;
         }
 
