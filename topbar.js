@@ -519,11 +519,6 @@ function enable () {
     Main.panel.addToStatusArea('WorkspaceMenu', menu, 0, 'left');
     menu.actor.show();
 
-    // Force transparency
-    panelActor.set_style('background-color: rgba(0, 0, 0, 0.35);');
-    [Main.panel._rightCorner, Main.panel._leftCorner]
-        .forEach(c => c.actor.opacity = 0);
-
     screenSignals.push(
         workspaceManager.connect_after('workspace-switched',
                                     (workspaceManager, from, to) => {
